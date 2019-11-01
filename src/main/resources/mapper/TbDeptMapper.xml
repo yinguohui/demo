@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.antiy.demo.dao.TbDeptMapper">
+  <resultMap id="BaseResultMap" type="com.antiy.demo.entiy.TbDept">
+    <!--@mbg.generated-->
+    <id column="id"  property="id" />
+    <result column="deptname"  property="deptname" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, deptname
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from tb_dept
+    where id = #{id}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--@mbg.generated-->
+    delete from tb_dept
+    where id = #{id}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.antiy.demo.entiy.TbDept" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into tb_dept (deptname)
+    values (#{deptname})
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.antiy.demo.entiy.TbDept" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into tb_dept
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="deptname != null">
+        deptname,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="deptname != null">
+        #{deptname},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.antiy.demo.entiy.TbDept">
+    <!--@mbg.generated-->
+    update tb_dept
+    <set>
+      <if test="deptname != null">
+        deptname = #{deptname},
+      </if>
+    </set>
+    where id = #{id}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.antiy.demo.entiy.TbDept">
+    <!--@mbg.generated-->
+    update tb_dept
+    set deptname = #{deptname}
+    where id = #{id}
+  </update>
+</mapper>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.antiy.demo.dao.TbEmpMapper">
+  <resultMap id="BaseResultMap" type="com.antiy.demo.entiy.TbEmp">
+    <id column="id"  property="id" />
+    <result column="name"  property="name" />
+    <result column="deptid"  property="deptid" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, `name`, deptid
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from tb_emp
+    where id = #{id}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from tb_emp
+    where id = #{id}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.antiy.demo.entiy.TbEmp" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into tb_emp (`name`, deptid)
+    values (#{name}, #{deptid})
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.antiy.demo.entiy.TbEmp" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into tb_emp
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="name != null">
+        `name`,
+      </if>
+      <if test="deptid != null">
+        deptid,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="name != null">
+        #{name},
+      </if>
+      <if test="deptid != null">
+        #{deptid},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.antiy.demo.entiy.TbEmp">
+    <!--@mbg.generated-->
+    update tb_emp
+    <set>
+      <if test="name != null">
+        `name` = #{name},
+      </if>
+      <if test="deptid != null">
+        deptid = #{deptid},
+      </if>
+    </set>
+    where id = #{id}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.antiy.demo.entiy.TbEmp">
+    update tb_emp
+    set `name` = #{name},
+      deptid = #{deptid}
+    where id = #{id}
+  </update>
+</mapper>
