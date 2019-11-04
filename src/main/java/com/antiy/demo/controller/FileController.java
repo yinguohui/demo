@@ -1,5 +1,6 @@
 package com.antiy.demo.controller;
 
+import io.swagger.annotations.Api;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,6 +16,7 @@ import java.util.Objects;
  * @Description
  * @Date 2019/10/16
  */
+@Api(tags = "1.1" ,description = "测试文件上传",value = "文件上传")
 @Controller
 @RequestMapping("/a")
 public class FileController {
