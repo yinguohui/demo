@@ -16,7 +16,7 @@ import java.util.logging.Logger;
  * @Description
  * @Date 2019/11/1
  */
-@Controller
+//@Controller
 @Api(tags = "1.1" ,description = "Reids",value = "Redis测试")
 public class RedisController {
     private static final String REDIS_TEST = "test";

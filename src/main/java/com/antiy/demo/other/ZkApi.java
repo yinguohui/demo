@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 import java.util.List;
 
-@Component
+//@Component
 public class ZkApi {
 
     private static final Logger logger = LoggerFactory.getLogger(ZkApi.class);

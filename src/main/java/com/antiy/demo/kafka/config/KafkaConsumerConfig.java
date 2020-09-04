@@ -18,8 +18,8 @@ import java.util.Map;
  * @Description
  * @Date 2019/12/9
  */
-@Configuration
-@EnableKafka
+//@Configuration
+//@EnableKafka
 public class KafkaConsumerConfig {
 
     /**

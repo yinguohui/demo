@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 
 import java.util.concurrent.CountDownLatch;
 
-@Configuration
+//@Configuration
 public class ZookeeperConfig {
     private static final Logger logger = LoggerFactory.getLogger(ZookeeperConfig.class);
 

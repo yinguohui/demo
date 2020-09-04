@@ -19,9 +19,9 @@ import java.util.concurrent.ConcurrentLinkedQueue;
  * @author Jleeci
  * @create 2019-01-07 14:56
  */
-@Component
-@ConditionalOnProperty(name = "logging.kafka.enable", havingValue = "true")
-@EnableScheduling
+//@Component
+//@ConditionalOnProperty(name = "logging.kafka.enable", havingValue = "true")
+//@EnableScheduling
 public class KafkaOperationTask {
 
     private static ConcurrentLinkedQueue<ProducerMessageDto> localQueen = new ConcurrentLinkedQueue<>();

@@ -18,7 +18,7 @@ import javax.annotation.Resource;
  * @Date: 2019/5/8 13:18
  * @Description: kafka 生产者处理类
  */
-@Component
+//@Component
 public class ProducerHandler {
 
     private static Logger log = LoggerFactory.getLogger(ProducerHandler.class);

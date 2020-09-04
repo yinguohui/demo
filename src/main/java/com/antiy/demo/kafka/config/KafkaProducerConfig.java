@@ -21,8 +21,8 @@ import java.util.Map;
  * @author Jleeci
  * @create 2019-01-02 13:28
  */
-@Configuration
-@ConditionalOnProperty(name = "logging.kafka.enable", havingValue = "true")
+//@Configuration
+//@ConditionalOnProperty(name = "logging.kafka.enable", havingValue = "true")
 public class KafkaProducerConfig {
     @Value(value = "${spring.kafka.bootstrap-servers}")
     private String bootstrapServers;

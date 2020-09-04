@@ -14,7 +14,7 @@ import java.io.IOException;
  * @Description
  * @Date 2019/11/4
  */
-@Controller
+//@Controller
 public class ZooKeeperController {
    @Autowired
     private ZkApi zkApi;

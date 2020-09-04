@@ -17,8 +17,8 @@ import java.util.Objects;
  * @Date 2019/10/16
  */
 @Api(tags = "1.1" ,description = "测试文件上传",value = "文件上传")
-@Controller
-@RequestMapping("/a")
+//@Controller
+//@RequestMapping("/a")
 public class FileController {
     @GetMapping("/")
     @ResponseBody
