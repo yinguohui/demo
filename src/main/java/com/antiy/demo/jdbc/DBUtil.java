@@ -15,4 +15,15 @@ public class DBUtil {
         Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/test?characterEncoding=UTF-8&serverTimezone=UTC", "root","root");
         return connection;
     }
+
+    public static void main(String[] args) {
+//        Class.forName();ClassLoader.getSystemClassLoader()
+        Integer a = 1000;
+        Integer b = 1000;
+        Integer c = 100;
+        Integer d = 100;
+        System.out.println(a==b);
+        System.out.println(c==d);
+//        StringBuffer
+    }
 }
