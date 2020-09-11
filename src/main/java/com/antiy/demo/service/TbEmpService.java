@@ -4,7 +4,7 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import com.antiy.demo.entiy.TbEmp;
 import com.antiy.demo.dao.TbEmpMapper;
-@Service
+//@Service
 public class TbEmpService{
 
     @Resource

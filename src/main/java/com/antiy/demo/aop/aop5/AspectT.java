@@ -31,4 +31,50 @@ public class AspectT {
     public void after(){
         System.out.println("开始之后");
     }
+//    使用==========================================================
+//    @Pointcut("@annotation(org.springframework.web.bind.annotation.RequestMapping) && @annotation(io.swagger.annotations.ApiOperation)")
+//    public void requestMapping() {
+//    }
+//
+//    /**
+//     * @Author: xuemeng
+//     * @Description: 日志切面
+//     * @Date: 9:56 2019/3/14
+//     */
+//    @Around(value = "requestMapping()")
+//    public Object log(ProceedingJoinPoint point) throws Throwable {
+//        ApiOperation apiOperation = ((MethodSignature) point.getSignature()).getMethod().getAnnotation(ApiOperation.class);
+//        RequestMapping requestMapping = ((MethodSignature) point.getSignature()).getMethod().getAnnotation(RequestMapping.class);
+//        RequestMapping requestMappingClass = point.getTarget().getClass().getAnnotation(RequestMapping.class);
+//        Object[] param = point.getArgs();
+//
+//        // 防止打印日志错误
+//        List<RequestMethod> methods = Arrays.asList(requestMapping.method());
+//        // 打印时间  用于调试
+//        if (methods.indexOf(RequestMethod.GET) == -1 && !(requestMappingClass.value()[0] + requestMapping.value()[0]).contains("file/upload")) {
+//            StringBuilder paramSb = new StringBuilder();
+//            for (Object object : param) {
+//                if (object instanceof ServletResponse || object instanceof ServletRequest) {
+//                    continue;
+//                }
+//                paramSb.append(JsonUtil.object2Json(object));
+//            }
+//            LogUtils.info(logger, "日志，地址：{}，功能：{}，备注：{}，入参：{}，时间：{}",
+//                    requestMappingClass.value()[0] + requestMapping.value()[0], apiOperation.value(), apiOperation.notes(), paramSb.toString(), System.currentTimeMillis());
+//        } else {
+//            LogUtils.info(logger, "日志，地址：{}，功能：{}，备注：{}",
+//                    requestMappingClass.value()[0] + requestMapping.value()[0], apiOperation.value(), apiOperation.notes());
+//        }
+//
+//        Object result = point.proceed();
+//
+//        if (methods.indexOf(RequestMethod.GET) == -1) {
+//            LogUtils.info(logger, "日志，地址：{}，功能：{}，备注：{}，返参：{}，时间：{}",
+//                    requestMappingClass.value()[0] + requestMapping.value()[0], apiOperation.value(), apiOperation.notes(), JsonUtil.object2Json(result), System.currentTimeMillis());
+//        } else {
+//            LogUtils.info(logger, "日志，地址：{}，功能：{}，备注：{}",
+//                    requestMappingClass.value()[0] + requestMapping.value()[0], apiOperation.value(), apiOperation.notes());
+//        }
+//        return result;
+//    }
 }

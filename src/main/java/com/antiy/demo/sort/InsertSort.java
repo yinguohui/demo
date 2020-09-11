@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * @Author ygh
- * @Description
+ * @Description  直接插入排序
  * @Date 2019/11/21
  */
 public class InsertSort {
@@ -31,17 +31,20 @@ public class InsertSort {
 
     public static void main(String[] args) {
         int[] test = {1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 1, 81, 522, 655, 444,  1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 733, 2, 3};
-        radixSort(test);
+        insertSort(test);
+
         int[] test1 = {1, 81, 522, 655, 444,  1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 1, 81, 522, 655, 444,  1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 733, 2, 3};
         //
         // radixMaxSort(test1);
         int[] test2 = {1, 81, 522, 655, 444,  1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 1, 81, 522, 655, 444,  1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 733, 2, 3};
         long s = System.currentTimeMillis();
-        insertSort(test2);
+        insertSortFunction(test2);
+        for (int i = 0; i < test2.length; i++) {
+            System.out.println(test2[i]);
+        }
         long e = System.currentTimeMillis();
         System.out.println("=======================" + (e-s));
     }
-
 
     /**
      * 功能描述 : 插入排序

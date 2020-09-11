@@ -4,7 +4,7 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import com.antiy.demo.entiy.Message;
 import com.antiy.demo.dao.MessageMapper;
-@Service
+//@Service
 public class MessageService{
 
     @Resource

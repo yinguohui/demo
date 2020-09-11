@@ -4,7 +4,7 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import com.antiy.demo.dao.TbDeptMapper;
 import com.antiy.demo.entiy.TbDept;
-@Service
+//@Service
 public class TbDeptService{
 
     @Resource
