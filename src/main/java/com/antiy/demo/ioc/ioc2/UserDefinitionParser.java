@@ -11,18 +11,19 @@ public class UserDefinitionParser extends AbstractSingleBeanDefinitionParser {
     protected Class<?> getBeanClass(Element element) {
         return User.class;
     }
+
     @Override
     protected void doParse(Element element, BeanDefinitionBuilder builder) {
         String id = element.getAttribute("id");
-        String userName=element.getAttribute("userName");
-        String email=element.getAttribute("email");
-        if(StringUtils.hasText(id)){
-            builder.addPropertyValue("id",id);
+        String userName = element.getAttribute("userName");
+        String email = element.getAttribute("email");
+        if (StringUtils.hasText(id)) {
+            builder.addPropertyValue("id", id);
         }
-        if(StringUtils.hasText(userName)){
+        if (StringUtils.hasText(userName)) {
             builder.addPropertyValue("userName", userName);
         }
-        if(StringUtils.hasText(email)){
+        if (StringUtils.hasText(email)) {
             builder.addPropertyValue("email", email);
         }
 

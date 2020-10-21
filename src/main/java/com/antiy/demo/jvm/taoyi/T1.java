@@ -11,17 +11,17 @@ import java.util.List;
  */
 public class T1 {
 
-    public static void test1(){
+    public static void test1() {
         // 逃逸对象 a
         String a = "11";
-        System.out.println(a+"11");
+        System.out.println(a + "11");
         b(a);
         a = null;
         System.out.println(a);
         b(a);
     }
 
-    public static void b(String a){
+    public static void b(String a) {
         System.out.println(a);
     }
 

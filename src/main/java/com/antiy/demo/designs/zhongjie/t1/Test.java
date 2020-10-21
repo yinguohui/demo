@@ -10,8 +10,8 @@ public class Test {
         A a = new A("A");
         B b = new B("B");
         C c = new C("C");
-        a.print(b,c);
-        b.print(a,c);
-        c.print(a,b);
+        a.print(b, c);
+        b.print(a, c);
+        c.print(a, b);
     }
 }

@@ -5,10 +5,11 @@ package com.antiy.demo.other;
  * @Description
  * @Date 2019/11/5
  */
-public class MyException extends Exception{
+public class MyException extends Exception {
     public MyException(String message) {
         super(message);
     }
+
     public MyException() {
     }
 

@@ -9,17 +9,17 @@ public class OpreationThread {
     private int money;
 
     //ATM取钱
-    public void getMoneyByATM(int money){
+    public void getMoneyByATM(int money) {
 
     }
 
     // 柜台字段
-    public void getMoneyByBar(int money){
+    public void getMoneyByBar(int money) {
 
     }
 
     //存钱
-    public void saveMoney(int money){
+    public void saveMoney(int money) {
 
     }
 

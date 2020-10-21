@@ -5,6 +5,5 @@ package com.antiy.demo.thread.example.quqian.t1;
  * @Description
  * @Date 2020/1/9
  */
-public class People
-{
+public class People {
 }

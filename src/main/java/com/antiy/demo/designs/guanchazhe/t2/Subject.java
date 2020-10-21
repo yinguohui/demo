@@ -10,6 +10,7 @@ public interface Subject {
 
     /**
      * 功能描述 : 增加一个订阅者
+     *
      * @author ygh
      * @date 16:49
      */
@@ -19,6 +20,7 @@ public interface Subject {
 
     /**
      * 功能描述 : 移除一个订阅者
+     *
      * @author ygh
      * @date 16:49
      */
@@ -28,6 +30,7 @@ public interface Subject {
 
     /**
      * 功能描述 : 通知数据改变
+     *
      * @author ygh
      * @date 16:51
      */

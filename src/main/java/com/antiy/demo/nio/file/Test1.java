@@ -12,8 +12,8 @@ import java.nio.channels.FileChannel;
 public class Test1 {
     public static void main(String[] args) throws IOException {
         // 获取文件来源 和 输出地址
-       // RandomAccessFile inputStream = new RandomAccessFile("D://1.txt","rw");
-       // RandomAccessFile outputStream = new RandomAccessFile("D://3.txt","rw");
+        // RandomAccessFile inputStream = new RandomAccessFile("D://1.txt","rw");
+        // RandomAccessFile outputStream = new RandomAccessFile("D://3.txt","rw");
         FileInputStream inputStream = new FileInputStream("D://1.txt");
         FileOutputStream outputStream = new FileOutputStream("D://2.txt");
 

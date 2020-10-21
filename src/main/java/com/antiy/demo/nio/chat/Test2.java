@@ -20,15 +20,15 @@ public class Test2 {
         channel.configureBlocking(false);
         ServerSocket serverSocket = channel.socket();
         serverSocket.bind(new InetSocketAddress(11113));
-        while(true){
+        while (true) {
             SocketChannel socketChannel =
                     channel.accept();
-            if (socketChannel!= null){
+            if (socketChannel != null) {
                 ByteBuffer byteBuffer = ByteBuffer.allocate(512);
                 int len = socketChannel.read(byteBuffer);
                 //byteBuffer.flip();
-                while (byteBuffer.hasRemaining()){
-                    String receiveText = new String( byteBuffer.array(),0,len);
+                while (byteBuffer.hasRemaining()) {
+                    String receiveText = new String(byteBuffer.array(), 0, len);
                     System.out.println(receiveText);
                 }
                 System.out.println(len);

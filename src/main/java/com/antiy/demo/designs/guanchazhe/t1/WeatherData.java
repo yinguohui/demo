@@ -34,7 +34,7 @@ public class WeatherData {
         this.qiYa = qiYa;
     }
 
-    public void weatherChanged(){
+    public void weatherChanged() {
 
         // 调用各种条件变化了 如果是现有设计的话--每增加一个就多写一个类，改一次这里的代码
     }

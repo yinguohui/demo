@@ -30,25 +30,25 @@ public class SelectorTest {
         // 服务端口注册监听
         channel.register(selector, SelectionKey.OP_ACCEPT);
         //
-        while (true){
+        while (true) {
             // 取得所有key的集合
             Set selectedKeys = selector.selectedKeys();
             Iterator it = selectedKeys.iterator();
-            while (it.hasNext()){
+            while (it.hasNext()) {
                 SelectionKey key = (SelectionKey) it.next();
-                if ((key.readyOps() & SelectionKey.OP_ACCEPT) == SelectionKey.OP_ACCEPT){
+                if ((key.readyOps() & SelectionKey.OP_ACCEPT) == SelectionKey.OP_ACCEPT) {
                     ServerSocketChannel channel1 = (ServerSocketChannel) key.channel();
                     // 接受请求
                     SocketChannel channel2 = channel1.accept();
                     channel2.configureBlocking(false);
-                    channel2.register(selector,SelectionKey.OP_READ);
+                    channel2.register(selector, SelectionKey.OP_READ);
                     it.remove();
-                }else if((key.readyOps() & SelectionKey.OP_READ) == SelectionKey.OP_READ){
+                } else if ((key.readyOps() & SelectionKey.OP_READ) == SelectionKey.OP_READ) {
                     SocketChannel channel1 = (SocketChannel) key.channel();
-                    while (true){
+                    while (true) {
                         buffer.clear();
                         int n = channel1.read(buffer);
-                        if (n <= 0){
+                        if (n <= 0) {
                             break;
                         }
                         buffer.flip();

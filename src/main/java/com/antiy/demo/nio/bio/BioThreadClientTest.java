@@ -18,12 +18,12 @@ public class BioThreadClientTest {
         int max = 20;
         CountDownLatch latch = new CountDownLatch(max);
         for (int i = 0; i < max; i++, latch.countDown()) {
-            ClientRequestThread requestThread = new ClientRequestThread(latch,i);
+            ClientRequestThread requestThread = new ClientRequestThread(latch, i);
             new Thread(requestThread).start();
         }
 
         // 只是为了保证守护线程在启动所有线程后，进入等待状态
-        synchronized (BioThreadClientTest.class){
+        synchronized (BioThreadClientTest.class) {
             BioThreadClientTest.class.wait();
         }
     }

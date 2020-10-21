@@ -7,13 +7,16 @@ package com.antiy.demo.designs.command.t1;
  */
 public class SimpleRemoteControl {
     Command command;
-    public SimpleRemoteControl(){
+
+    public SimpleRemoteControl() {
 
     }
-    public void setCommand(Command command){
+
+    public void setCommand(Command command) {
         this.command = command;
     }
-    public void buttonWasPressed(){
+
+    public void buttonWasPressed() {
         command.execute();
     }
 }

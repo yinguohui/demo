@@ -5,7 +5,7 @@ package com.antiy.demo.aop.aop1;
  * @Description
  * @Date 2020/9/4
  */
-public class Hello1 implements Hello{
+public class Hello1 implements Hello {
     @Override
     public void sayhello() {
         System.out.println("我在说你好");

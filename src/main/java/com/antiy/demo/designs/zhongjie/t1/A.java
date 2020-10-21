@@ -12,9 +12,9 @@ public class A {
         this.name = name;
     }
 
-    public void print(B b,C c){
-        System.out.println("这是"+this.name);
-        System.out.println("打印"+b.getName()+c.getName());
+    public void print(B b, C c) {
+        System.out.println("这是" + this.name);
+        System.out.println("打印" + b.getName() + c.getName());
 
     }
 

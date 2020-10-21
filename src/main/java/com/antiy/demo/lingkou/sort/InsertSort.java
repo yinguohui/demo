@@ -1,10 +1,10 @@
-package com.antiy.demo.sort;
+package com.antiy.demo.lingkou.sort;
 
 import java.util.Arrays;
 
 /**
  * @Author ygh
- * @Description  直接插入排序
+ * @Description 直接插入排序
  * @Date 2019/11/21
  */
 public class InsertSort {
@@ -30,20 +30,20 @@ public class InsertSort {
     }
 
     public static void main(String[] args) {
-        int[] test = {1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 1, 81, 522, 655, 444,  1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 733, 2, 3};
+        int[] test = {1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 733, 2, 3};
         insertSort(test);
 
-        int[] test1 = {1, 81, 522, 655, 444,  1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 1, 81, 522, 655, 444,  1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 733, 2, 3};
+        int[] test1 = {1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 733, 2, 3};
         //
         // radixMaxSort(test1);
-        int[] test2 = {1, 81, 522, 655, 444,  1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 1, 81, 522, 655, 444,  1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 733, 2, 3};
+        int[] test2 = {1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 1, 81, 522, 655, 444, 733, 2, 3};
         long s = System.currentTimeMillis();
         insertSortFunction(test2);
         for (int i = 0; i < test2.length; i++) {
             System.out.println(test2[i]);
         }
         long e = System.currentTimeMillis();
-        System.out.println("=======================" + (e-s));
+        System.out.println("=======================" + (e - s));
     }
 
     /**
@@ -184,11 +184,12 @@ public class InsertSort {
 
     /**
      * 功能描述 :
-     *  快速排序（递归）
+     * 快速排序（递归）
+     * <p>
+     * ①. 从数列中挑出一个元素，称为"基准"（pivot）。
+     * ②. 重新排序数列，所有比基准值小的元素摆放在基准前面，所有比基准值大的元素摆在基准后面（相同的数可以到任一边）。在这个分区结束之后，该基准就处于数列的中间位置。这个称为分区（partition）操作。
+     * ③. 递归地（recursively）把小于基准值元素的子数列和大于基准值元素的子数列排序。
      *
-     *   ①. 从数列中挑出一个元素，称为"基准"（pivot）。
-     *   ②. 重新排序数列，所有比基准值小的元素摆放在基准前面，所有比基准值大的元素摆在基准后面（相同的数可以到任一边）。在这个分区结束之后，该基准就处于数列的中间位置。这个称为分区（partition）操作。
-     *   ③. 递归地（recursively）把小于基准值元素的子数列和大于基准值元素的子数列排序。
      * @author ygh
      * @date 10:02
      */
@@ -225,21 +226,22 @@ public class InsertSort {
 
     /**
      * 功能描述 :
+     * <p>
+     * 归并排序（递归）
+     * <p>
+     * ①. 将序列每相邻两个数字进行归并操作，形成 floor(n/2)个序列，排序后每个序列包含两个元素；
+     * ②. 将上述序列再次归并，形成 floor(n/4)个序列，每个序列包含四个元素；
+     * ③. 重复步骤②，直到所有元素排序完毕。
+     * <p>
+     * 平均时间复杂度	最好情况  	最坏情况	      空间复杂度
+     * O(nlog₂n)	    O(nlog₂n)	O(nlog₂n)	  O(n)
      *
-     *  归并排序（递归）
-     *
-     *  ①. 将序列每相邻两个数字进行归并操作，形成 floor(n/2)个序列，排序后每个序列包含两个元素；
-     *  ②. 将上述序列再次归并，形成 floor(n/4)个序列，每个序列包含四个元素；
-     *  ③. 重复步骤②，直到所有元素排序完毕。
-     *
-     *  平均时间复杂度	最好情况  	最坏情况	      空间复杂度
-     *  O(nlog₂n)	    O(nlog₂n)	O(nlog₂n)	  O(n)
      * @author ygh
      * @date 10:43
      */
 
-    public static int[] mergingSort(int[] arr){
-        if(arr.length <= 1) return arr;
+    public static int[] mergingSort(int[] arr) {
+        if (arr.length <= 1) return arr;
 
         int num = arr.length >> 1;
         int[] leftArr = Arrays.copyOfRange(arr, 0, num);
@@ -249,54 +251,56 @@ public class InsertSort {
         return mergeTwoArray(mergingSort(leftArr), mergingSort(rightArr));
     }
 
-    private static int[] mergeTwoArray(int[] arr1, int[] arr2){
+    private static int[] mergeTwoArray(int[] arr1, int[] arr2) {
         int i = 0, j = 0, k = 0;
         //申请额外的空间存储合并之后的数组
         int[] result = new int[arr1.length + arr2.length];
         //选取两个序列中的较小值放入新数组
-        while(i < arr1.length && j < arr2.length){
-            if(arr1[i] <= arr2[j]){
+        while (i < arr1.length && j < arr2.length) {
+            if (arr1[i] <= arr2[j]) {
                 result[k++] = arr1[i++];
-            }else{
+            } else {
                 result[k++] = arr2[j++];
             }
         }
         //序列1中多余的元素移入新数组
-        while(i < arr1.length){
+        while (i < arr1.length) {
             result[k++] = arr1[i++];
         }
         //序列2中多余的元素移入新数组
-        while(j < arr2.length){
+        while (j < arr2.length) {
             result[k++] = arr2[j++];
         }
         System.out.println("Merging: " + Arrays.toString(result));
         return result;
     }
+
     /**
      * 基数排序（LSD 从低位开始）
-     *
+     * <p>
      * 基数排序适用于：
-     *  (1)数据范围较小，建议在小于1000
-     *  (2)每个数值都要大于等于0
-     *
+     * (1)数据范围较小，建议在小于1000
+     * (2)每个数值都要大于等于0
+     * <p>
      * ①. 取得数组中的最大数，并取得位数；
      * ②. arr为原始数组，从最低位开始取每个位组成radix数组；
      * ③. 对radix进行计数排序（利用计数排序适用于小范围数的特点）；
-     * @param arr    待排序数组
+     *
+     * @param arr 待排序数组
      */
-    public static void radixSort(int[] arr){
+    public static void radixSort(int[] arr) {
         long start = System.currentTimeMillis();
-        if(arr.length <= 1) return;
+        if (arr.length <= 1) return;
 
         //取得数组中的最大数，并取得位数
         int max = 0;
-        for(int i = 0; i < arr.length; i++){
-            if(max < arr[i]){
+        for (int i = 0; i < arr.length; i++) {
+            if (max < arr[i]) {
                 max = arr[i];
             }
         }
         int maxDigit = 1;
-        while(max / 10 > 0){
+        while (max / 10 > 0) {
             maxDigit++;
             max = max / 10;
         }
@@ -307,12 +311,12 @@ public class InsertSort {
         int base = 10;
 
         //从低位到高位，对每一位遍历，将所有元素分配到桶中
-        for(int i = 0; i < maxDigit; i++){
+        for (int i = 0; i < maxDigit; i++) {
             //存储各个桶中存储元素的数量 初始化为0
             int[] bktLen = new int[10];
 
             //分配：将所有元素分配到桶中
-            for(int j = 0; j < arr.length; j++){
+            for (int j = 0; j < arr.length; j++) {
                 // 得到个位，十位等的值
                 int whichBucket = (arr[j] % base) / (base / 10);
                 // buckets 第一维表示该位数的大小，二维是存的该位大小已有的个数
@@ -323,8 +327,8 @@ public class InsertSort {
 
             //收集：将不同桶里数据挨个捞出来,为下一轮高位排序做准备,由于靠近桶底的元素排名靠前,因此从桶底先捞
             int k = 0;
-            for(int b = 0; b < buckets.length; b++){
-                for(int p = 0; p < bktLen[b]; p++){
+            for (int b = 0; b < buckets.length; b++) {
+                for (int p = 0; p < bktLen[b]; p++) {
                     arr[k++] = buckets[b][p];
                 }
             }
@@ -333,7 +337,7 @@ public class InsertSort {
         }
         long end = System.currentTimeMillis();
         System.out.println("Sorting: " + Arrays.toString(arr));
-        System.out.println("time :" + (end-start));
+        System.out.println("time :" + (end - start));
     }
 
 }

@@ -7,14 +7,14 @@ import java.util.LinkedList;
  * @Description
  * @Date 2019/12/9
  */
-public class WeatherData implements Subject{
+public class WeatherData implements Subject {
     // 订阅者
     private LinkedList linkedList;
     private float wenDu;
     private float shiDU;
     private float qiYa;
 
-    public WeatherData(){
+    public WeatherData() {
         linkedList = new LinkedList();
     }
 
@@ -30,17 +30,17 @@ public class WeatherData implements Subject{
 
     @Override
     public void notifiedObserver() {
-        linkedList.forEach(i->{
+        linkedList.forEach(i -> {
             Observer observer = (Observer) i;
-            observer.update(wenDu,shiDU,qiYa);
+            observer.update(wenDu, shiDU, qiYa);
         });
     }
 
-    public void weatherChanged(){
+    public void weatherChanged() {
         notifiedObserver();
     }
 
-    public void setWeatherData(float wenDu, float shiDU,float qiYa){
+    public void setWeatherData(float wenDu, float shiDU, float qiYa) {
         this.wenDu = wenDu;
         this.shiDU = shiDU;
         this.qiYa = qiYa;

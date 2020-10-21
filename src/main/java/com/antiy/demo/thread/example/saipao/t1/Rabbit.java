@@ -5,7 +5,7 @@ package com.antiy.demo.thread.example.saipao.t1;
  * @Description 兔子每秒0.5米的速度，每跑2米休息10秒，
  * @Date 2020/1/9
  */
-public class Rabbit extends Animal{
+public class Rabbit extends Animal {
     @Override
     public void running() {
         length -= 0.5;

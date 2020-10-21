@@ -7,13 +7,14 @@ package com.antiy.demo;
  */
 public class BaseKnowledge {
     public void main(String[] args) {
-          People people = new People();
-          people.setAge(11);
-          people.setName("aaa");
+        People people = new People();
+        people.setAge(11);
+        people.setName("aaa");
 
 
     }
-    public class People implements Cloneable{
+
+    public class People implements Cloneable {
         private int age;
         private String name;
 

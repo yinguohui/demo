@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 
 @Component()
 public class ServiceHandle {
-    public void handle(){
+    public void handle() {
         System.out.println("处理业务员");
     }
 }

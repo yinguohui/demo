@@ -60,10 +60,11 @@ public class SimplePoolImpl implements ISimplePool {
 
     /**
      * 对外提供管道
-     * @author heylinlook
-     * @date 2018/4/27 20:20
+     *
      * @param
      * @return
+     * @author heylinlook
+     * @date 2018/4/27 20:20
      */
     @Override
     public PoolConnection getConnection() {
@@ -93,10 +94,11 @@ public class SimplePoolImpl implements ISimplePool {
      * 获取有效的管道 加锁
      * 1.管道对象长期在集合中，没有超时回收
      * 2.没有被其他线程占用
-     * @author heylinlook
-     * @date 2018/4/27 20:23
+     *
      * @param
      * @return
+     * @author heylinlook
+     * @date 2018/4/27 20:23
      */
     private synchronized PoolConnection getRealConnection() {
         for (PoolConnection conn : poolConnections) {

@@ -5,13 +5,13 @@ package com.antiy.demo.thread.example.saipao.t1;
  * @Description
  * @Date 2020/1/9
  */
-public abstract class Animal extends Thread{
+public abstract class Animal extends Thread {
     public double length = 20;
 
     @Override
     public void run() {
         super.run();
-        while (length>0){
+        while (length > 0) {
             running();
         }
     }
@@ -22,7 +22,7 @@ public abstract class Animal extends Thread{
     //跑完时的回调接口，通知其他不跑了
 
     //在需要回调数据的地方（两个子类需要），声明一个接口
-    public static interface Calltoback{
+    public static interface Calltoback {
         public void win();
     }
 

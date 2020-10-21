@@ -17,7 +17,7 @@ public class ItcastConnection extends ConnectionWrapper {
     private MyDBPool pool;
 
     public ItcastConnection(Connection connection, MyDBPool pool) throws SQLException {
-        super(new MysqlPooledConnection((JdbcConnection) connection), (JdbcConnection) connection,false);
+        super(new MysqlPooledConnection((JdbcConnection) connection), (JdbcConnection) connection, false);
         this.pool = pool;
     }
 

@@ -7,6 +7,7 @@ public class ShapeFactory {
 
     private static final String CIRCLE = "CIRCLE";
     private static final String SQUARE = "SQUARE";
+
     /**
      * 功能描述 :使用 getShape 方法获取形状类型的对象
      *

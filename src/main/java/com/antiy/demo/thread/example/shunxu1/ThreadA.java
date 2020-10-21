@@ -5,7 +5,7 @@ package com.antiy.demo.thread.example.shunxu1;
  * @Description
  * @Date 2020/1/8
  */
-public class ThreadA extends Thread{
+public class ThreadA extends Thread {
     private String name;
 
     public ThreadA(String name) {
@@ -14,7 +14,7 @@ public class ThreadA extends Thread{
 
     @Override
     public void run() {
-        while (true){
+        while (true) {
             try {
                 sleep(1000);
             } catch (InterruptedException e) {

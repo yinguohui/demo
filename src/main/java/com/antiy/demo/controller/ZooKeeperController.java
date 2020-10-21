@@ -16,14 +16,14 @@ import java.io.IOException;
  */
 //@Controller
 public class ZooKeeperController {
-   @Autowired
+    @Autowired
     private ZkApi zkApi;
 
 
     @RequestMapping("/create")
     @ResponseBody
-    private boolean isExist(String path){
-        boolean b =zkApi.createNode(path,null);
+    private boolean isExist(String path) {
+        boolean b = zkApi.createNode(path, null);
         return b;
     }
 }

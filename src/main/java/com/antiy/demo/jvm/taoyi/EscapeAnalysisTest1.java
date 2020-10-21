@@ -2,6 +2,8 @@ package com.antiy.demo.jvm.taoyi;
 
 /**
  * @author yinguohui
+ *
+ * 测试同步消除
  * <p>
  * JVM 参数为-server -Xmx10m -Xms10m -XX:-DoEscapeAnalysis -XX:+PrintGC, 运行结果 530
  * <p>
@@ -11,8 +13,11 @@ package com.antiy.demo.jvm.taoyi;
  */
 public class EscapeAnalysisTest1 {
     public static void alloc() {
-        byte[] b = new byte[2];
-        b[0] = 1;
+        synchronized (new Object()){
+            byte[] b = new byte[2];
+            b[0] = 1;
+        }
+
     }
 
     public static void main(String[] args) {

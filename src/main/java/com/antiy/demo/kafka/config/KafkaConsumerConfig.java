@@ -40,7 +40,7 @@ public class KafkaConsumerConfig {
     private String groupId;
 
     public ConcurrentKafkaListenerContainerFactory<String, String> kafkaListenerContainerFactory() {
-        ConcurrentKafkaListenerContainerFactory<String,String> factory = new ConcurrentKafkaListenerContainerFactory<>();
+        ConcurrentKafkaListenerContainerFactory<String, String> factory = new ConcurrentKafkaListenerContainerFactory<>();
         // 加入配置
         factory.setConsumerFactory(sampleConsumerFactory());
         factory.setConcurrency(5);
@@ -59,6 +59,7 @@ public class KafkaConsumerConfig {
 
     /**
      * 功能描述 : 加载配置
+     *
      * @author ygh
      * @date 10:26
      */

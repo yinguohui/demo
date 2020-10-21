@@ -15,6 +15,7 @@ import java.lang.reflect.Method;
 public class UserProxy implements MethodInterceptor {
 
     private Object target;
+
     public UserProxy(Object target) {
         this.target = target;
     }

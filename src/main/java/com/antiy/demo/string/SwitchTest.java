@@ -8,7 +8,7 @@ package com.antiy.demo.string;
 public class SwitchTest {
     public static void main(String[] args) {
         String test = "123";
-        switch (test){
+        switch (test) {
             case "123":
                 System.out.println("正确");
                 break;

@@ -29,7 +29,7 @@ public class NioSocketServer {
         Selector selector = Selector.open();
         // 服务器通道注册事件 (服务器只能注册SelectionKey.OP_ACCEPT)
         channel.register(selector, SelectionKey.OP_ACCEPT);
-        channel2.register(selector,SelectionKey.OP_ACCEPT);
+        channel2.register(selector, SelectionKey.OP_ACCEPT);
         try {
             while (true) {
                 //如果条件成立，说明本次询问selector，并没有获取到任何准备好的、感兴趣的事件

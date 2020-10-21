@@ -5,7 +5,7 @@ package com.antiy.demo.aop.aop2;
  * @Description
  * @Date 2020/9/4
  */
-public class UserT1 implements User{
+public class UserT1 implements User {
     @Override
     public void save() {
         System.out.println("保存用户数据");

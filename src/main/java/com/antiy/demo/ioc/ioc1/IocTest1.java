@@ -21,6 +21,6 @@ public class IocTest1 {
         System.out.println("urlResource1 is UrlResource:" + (urlResource1 instanceof UrlResource));
 
         Resource urlResource2 = resourceLoader.getResource("http://www.baidu.com");
-        System.out.println("urlResource1 is urlResource:" + (urlResource2 instanceof  UrlResource));
+        System.out.println("urlResource1 is urlResource:" + (urlResource2 instanceof UrlResource));
     }
 }

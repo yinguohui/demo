@@ -22,10 +22,11 @@ public class DemoApplicationTests {
     @Test
     public void contextLoads() {
     }
+
     @Test
-    public void testRedis(){
+    public void testRedis() {
         String test = "这个是测试";
-        redisTemplate.opsForValue().set("test",test);
+        redisTemplate.opsForValue().set("test", test);
         log.info("开始");
         String value = (String) redisTemplate.opsForValue().get("test");
         System.out.println(value);

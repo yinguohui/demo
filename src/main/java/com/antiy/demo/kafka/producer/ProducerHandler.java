@@ -55,7 +55,7 @@ public class ProducerHandler {
         } catch (Exception e) {
             // 发送消息失败，缓存消息至本地
             KafkaOperationTask.localQueenAdd(message);
-            log.error( "The cache operation log was successful");
+            log.error("The cache operation log was successful");
         }
     }
 }

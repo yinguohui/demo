@@ -5,24 +5,26 @@ package com.antiy.demo.designs.guanchazhe.t2;
  * @Description
  * @Date 2019/12/9
  */
-public class CurrentDisplay implements  Observer,DisplayElement{
+public class CurrentDisplay implements Observer, DisplayElement {
 
     private Subject subject;
     private float wenDu;
     private float shiDu;
+
     /**
      * 功能描述 : 构造函数，用于注册
+     *
      * @author ygh
      * @date 17:19
      */
-    public CurrentDisplay(Subject subject){
+    public CurrentDisplay(Subject subject) {
         this.subject = subject;
         subject.addObserver(this);
     }
 
     @Override
     public void display() {
-        System.out.println("shiDu"+shiDu+":wenDu"+wenDu);
+        System.out.println("shiDu" + shiDu + ":wenDu" + wenDu);
     }
 
     @Override

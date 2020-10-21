@@ -6,6 +6,6 @@ public class UserNamespaceHandler extends NamespaceHandlerSupport {
 
     @Override
     public void init() {
-        registerBeanDefinitionParser("user",new UserDefinitionParser());
+        registerBeanDefinitionParser("user", new UserDefinitionParser());
     }
 }

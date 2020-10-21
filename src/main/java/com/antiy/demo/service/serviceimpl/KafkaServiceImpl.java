@@ -15,19 +15,19 @@ import java.util.Properties;
 public class KafkaServiceImpl {
     public static void main(String[] args) throws MyException {
         KafkaServiceImpl kafkaService = new KafkaServiceImpl();
-        String []test = {"testa","testb"};
+        String[] test = {"testa", "testb"};
         kafkaService.testSimpleProducer(test);
     }
 
-    private void testSimpleProducer(String [] topicName) throws MyException {
-        if (topicName.length==0){
+    private void testSimpleProducer(String[] topicName) throws MyException {
+        if (topicName.length == 0) {
             System.out.println("topic");
             throw new MyException("topic不能为空");
         }
         String topic = topicName[0];
         Properties properties = new Properties();
-        properties.put("bootstrap.servers","192.168.171.129:9092");
-        properties.put("acks","all");
+        properties.put("bootstrap.servers", "192.168.171.129:9092");
+        properties.put("acks", "all");
         //If the request fails, the producer can automatically retry,重试次数
         properties.put("retries", 0);
 
@@ -49,13 +49,15 @@ public class KafkaServiceImpl {
         Producer<String, String> producer = new KafkaProducer
                 <String, String>(properties);
 
-        for(int i = 0; i < 10; i++){
+        for (int i = 0; i < 10; i++) {
             producer.send(new ProducerRecord(topic,
-                    Integer.toString(i),Integer.toString(i)));
+                    Integer.toString(i), Integer.toString(i)));
         }
         System.out.println("Message sent successfully");
-                producer.close();
+        producer.close();
     }
-    private void callback(){}
+
+    private void callback() {
+    }
 
 }

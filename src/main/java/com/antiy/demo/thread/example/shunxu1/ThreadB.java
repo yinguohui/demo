@@ -5,7 +5,7 @@ package com.antiy.demo.thread.example.shunxu1;
  * @Description
  * @Date 2020/1/8
  */
-public class ThreadB extends Thread{
+public class ThreadB extends Thread {
     private String name;
 
     public ThreadB(String name) {

@@ -10,14 +10,15 @@ public class Demo1 {
         A a = new A();
         a.start();
 
-        for (;  ; ) {
-            if (a.isFlag()){
+        for (; ; ) {
+            if (a.isFlag()) {
                 System.out.println("有点东西");
             }
         }
     }
-    static class A extends Thread{
-        private  boolean flag = false;
+
+    static class A extends Thread {
+        private boolean flag = false;
 
         public boolean isFlag() {
             return flag;
@@ -31,7 +32,7 @@ public class Demo1 {
                 e.printStackTrace();
             }
             flag = true;
-            System.out.println("flag" +flag);
+            System.out.println("flag" + flag);
         }
     }
 }

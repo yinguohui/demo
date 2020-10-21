@@ -7,11 +7,11 @@ package com.antiy.demo.designs.command.t1;
  */
 public class Light {
 
-    public void on(){
+    public void on() {
         System.out.println("开灯");
     }
 
-    public void off(){
+    public void off() {
         System.out.println("关灯");
     }
 }

@@ -14,7 +14,7 @@ public class StringCompose {
             a += "a";
         }
         long end1 = System.currentTimeMillis();
-        System.out.println("+的效率" + (end1-start1));
+        System.out.println("+的效率" + (end1 - start1));
 
         long start2 = System.currentTimeMillis();
         String b = "a";
@@ -22,7 +22,7 @@ public class StringCompose {
             b = b.concat("a");
         }
         long end2 = System.currentTimeMillis();
-        System.out.println("concat的效率" + (end2-start2));
+        System.out.println("concat的效率" + (end2 - start2));
 
         long start3 = System.currentTimeMillis();
         StringBuilder c = new StringBuilder("c");
@@ -30,7 +30,7 @@ public class StringCompose {
             c = c.append("c");
         }
         long end3 = System.currentTimeMillis();
-        System.out.println("append的效率" + (end3-start3));
+        System.out.println("append的效率" + (end3 - start3));
 
 
     }

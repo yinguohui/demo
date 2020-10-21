@@ -10,9 +10,10 @@ import java.util.Map;
  */
 public class T350 {
     public static void main(String[] args) {
-        int[] nums1 = {}; int[] nums2 = {};
-        Map map  =new HashMap(10);
-        Map map1  =new HashMap(10);
+        int[] nums1 = {};
+        int[] nums2 = {};
+        Map map = new HashMap(10);
+        Map map1 = new HashMap(10);
         for (int i = 0; i < nums1.length; i++) {
 
         }

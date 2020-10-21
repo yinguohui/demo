@@ -22,8 +22,8 @@ public class AspectTest {
 //                new ClassPathXmlApplicationContext("applicationContext.xml");
 //        ServiceHandle landlord =  context.getBean("serviceHandle", ServiceHandle.class);
         SpringApplication.run(DemoApplication.class, args);
-        ApplicationContext context =  SpringContextUtil.getApplicationContext();
-        ServiceHandle landlord =  context.getBean("serviceHandle", ServiceHandle.class);
+        ApplicationContext context = SpringContextUtil.getApplicationContext();
+        ServiceHandle landlord = context.getBean("serviceHandle", ServiceHandle.class);
         landlord.handle();
     }
 }

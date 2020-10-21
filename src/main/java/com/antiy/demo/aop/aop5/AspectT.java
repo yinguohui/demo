@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
  * execution(* com.baidu.dao..*(..))  ..*表示包、子孙包下所有类
  * 匹配指定类所有方法 execution(* com.baidu.service.UserService.*(..))
  * 匹配实现特定接口所有类方法
- *     execution(* com.baidu.dao.GenericDAO+.*(..))
+ * execution(* com.baidu.dao.GenericDAO+.*(..))
  * 匹配所有save开头的方法 execution(* save*(..))
  * @Description
  * @Date 2020/9/4
@@ -23,12 +23,12 @@ import org.springframework.stereotype.Component;
 public class AspectT {
 
     @Before("execution(* com.antiy.demo.aop.aop5..*(..))")
-    public void before(){
+    public void before() {
         System.out.println("开始之前");
     }
 
     @After("execution(* com.antiy.demo.aop.aop5..*(..))")
-    public void after(){
+    public void after() {
         System.out.println("开始之后");
     }
 //    使用==========================================================

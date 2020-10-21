@@ -12,6 +12,7 @@ import java.util.concurrent.*;
  */
 public class ExecutorsOOM {
     private static ExecutorService executor = Executors.newFixedThreadPool(15);
+
     //相当于
 //    return new ThreadPoolExecutor(nThreads, nThreads,
 //                                      0L,TimeUnit.MILLISECONDS,
@@ -30,7 +31,7 @@ public class ExecutorsOOM {
 //        这是因为当前线程池使用的队列是有边界队列，队列已经满了便无法继续处理新的请求。但是异常（Exception）总比发生错误（Error）要好。
         ThreadFactory namedThreadFactory = new ThreadFactoryBuilder()
                 .setNameFormat("demo-pool-%d").build();
-        ExecutorService executorService = new ThreadPoolExecutor(5,200,0L,TimeUnit.MILLISECONDS,new ArrayBlockingQueue<>(1000),namedThreadFactory,new ThreadPoolExecutor.AbortPolicy());
+        ExecutorService executorService = new ThreadPoolExecutor(5, 200, 0L, TimeUnit.MILLISECONDS, new ArrayBlockingQueue<>(1000), namedThreadFactory, new ThreadPoolExecutor.AbortPolicy());
         for (int i = 0; i < 1024; i++) {
             // 导致GC overhead limit exceeded
             executorService.execute(new SubThread());

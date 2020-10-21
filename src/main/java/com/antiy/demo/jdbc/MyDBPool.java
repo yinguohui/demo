@@ -32,6 +32,7 @@ public class MyDBPool {
 
     /**
      * 功能描述 : 初始化链接
+     *
      * @author ygh
      * @date 11:06
      */
@@ -44,12 +45,13 @@ public class MyDBPool {
             connections.add(conWapper);
         }
     }
+
     public void add(Connection con) {
         connections.add(con);
     }
 
     public Connection getConnection() throws SQLException {
-        if(connections.size() > 0) {
+        if (connections.size() > 0) {
             return connections.remove(0);
         }
         throw new SQLException("没连接了");

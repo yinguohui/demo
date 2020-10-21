@@ -13,9 +13,10 @@ public class PoolManager {
 
     /**
      * 内部类
+     *
+     * @param
      * @author heylinlook
      * @date 2018/4/27 20:44
-     * @param
      * @return
      */
     private static class createPool {
@@ -26,10 +27,11 @@ public class PoolManager {
      * JVM中类加载器字节码是一个严格互斥理论模型
      * 类加载器原理
      * 完美的实现线程安全
-     * @author heylinlook
-     * @date 2018/4/27 20:45
+     *
      * @param
      * @return
+     * @author heylinlook
+     * @date 2018/4/27 20:45
      */
     public static SimplePoolImpl getInstance() {
         return createPool.simplePool;

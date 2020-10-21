@@ -11,9 +11,10 @@ public class B {
     public B(String name) {
         this.name = name;
     }
-    public void print(A a,C c){
-        System.out.println("这是"+this.name);
-        System.out.println("打印"+a.getName()+c.getName());
+
+    public void print(A a, C c) {
+        System.out.println("这是" + this.name);
+        System.out.println("打印" + a.getName() + c.getName());
     }
 
     public String getName() {

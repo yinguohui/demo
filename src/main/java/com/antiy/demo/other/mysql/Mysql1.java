@@ -26,8 +26,8 @@ public class Mysql1 {
 //        statement.addBatch(testsql2);
 //        statement.executeBatch();
         char b = 'v';
-        char c = (char) (b-32);
+        char c = (char) (b - 32);
         System.out.println(c);
-        System.out.println((char)32);
+        System.out.println((char) 32);
     }
 }

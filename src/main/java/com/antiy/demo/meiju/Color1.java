@@ -5,8 +5,8 @@ package com.antiy.demo.meiju;
  * @Description 向枚举中加入方法
  * @Date 2020/1/9
  */
-public enum  Color1 {
-    RED("红色",213),BLACK("黑色",255);
+public enum Color1 {
+    RED("红色", 213), BLACK("黑色", 255);
 
     private String name;
     private int c;
@@ -16,9 +16,9 @@ public enum  Color1 {
         this.c = c;
     }
 
-    public static String getNameByC(int c){
-        for (Color1 co: Color1.values()) {
-            if (co.getC() == c){
+    public static String getNameByC(int c) {
+        for (Color1 co : Color1.values()) {
+            if (co.getC() == c) {
                 return co.name;
             }
         }

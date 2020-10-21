@@ -21,12 +21,12 @@ public class NioServer {
     /**
      * 功能描述 :标识数字
      */
-    private  int flag = 0;
+    private int flag = 0;
 
     /**
      * 功能描述 :缓冲区大小
      */
-    private  int BLOCK = 4096;
+    private int BLOCK = 4096;
 
     /**
      * 功能描述 :接受数据缓冲区
@@ -35,8 +35,9 @@ public class NioServer {
     /**
      * 功能描述 :发送数据缓冲区
      */
-    private  ByteBuffer receivebuffer = ByteBuffer.allocate(BLOCK);
-    private  Selector selector;
+    private ByteBuffer receivebuffer = ByteBuffer.allocate(BLOCK);
+    private Selector selector;
+
     public NioServer(int port) throws IOException {
         // 打开服务器套接字通道
         ServerSocketChannel serverSocketChannel = ServerSocketChannel.open();
@@ -55,6 +56,7 @@ public class NioServer {
 
     /**
      * 功能描述 : 监听
+     *
      * @author ygh
      * @date 15:11
      */
@@ -72,6 +74,7 @@ public class NioServer {
             }
         }
     }
+
     // 处理请求
     private void handleKey(SelectionKey selectionKey) throws IOException {
         // 接受请求
@@ -79,7 +82,7 @@ public class NioServer {
         SocketChannel client = null;
         String receiveText;
         String sendText;
-        int count=0;
+        int count = 0;
         // 测试此键的通道是否已准备好接受新的套接字连接。
         if (selectionKey.isAcceptable()) {
             // 返回为之创建此键的通道。
@@ -99,8 +102,8 @@ public class NioServer {
             //读取服务器发送来的数据到缓冲区中
             count = client.read(receivebuffer);
             if (count > 0) {
-                receiveText = new String( receivebuffer.array(),0,count);
-                System.out.println("服务器端接受客户端数据--:"+receiveText);
+                receiveText = new String(receivebuffer.array(), 0, count);
+                System.out.println("服务器端接受客户端数据--:" + receiveText);
                 client.register(selector, SelectionKey.OP_WRITE);
             }
         } else if (selectionKey.isWritable()) {
@@ -108,14 +111,14 @@ public class NioServer {
             sendbuffer.clear();
             // 返回为之创建此键的通道。
             client = (SocketChannel) selectionKey.channel();
-            sendText="message from server--" + flag++;
+            sendText = "message from server--" + flag++;
             //向缓冲区中输入数据
             sendbuffer.put(sendText.getBytes());
             //将缓冲区各标志复位,因为向里面put了数据标志被改变要想从中读取数据发向服务器,就要复位
             sendbuffer.flip();
             //输出到通道
             client.write(sendbuffer);
-            System.out.println("服务器端向客户端发送数据--："+sendText);
+            System.out.println("服务器端向客户端发送数据--：" + sendText);
             client.register(selector, SelectionKey.OP_READ);
         }
     }

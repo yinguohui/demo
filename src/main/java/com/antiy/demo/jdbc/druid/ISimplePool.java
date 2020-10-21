@@ -9,6 +9,7 @@ public interface ISimplePool {
 
     /**
      * 功能描述 : 获取连接
+     *
      * @author ygh
      * @date 13:31
      */
@@ -16,6 +17,7 @@ public interface ISimplePool {
 
     /**
      * 功能描述 :  创建连接
+     *
      * @author ygh
      * @date 13:31
      */

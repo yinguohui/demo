@@ -27,7 +27,7 @@ public class BioThreadServerTest {
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            if (serverSocket != null){
+            if (serverSocket != null) {
                 try {
                     serverSocket.close();
                 } catch (IOException e) {

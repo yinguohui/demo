@@ -12,7 +12,7 @@ import java.sql.SQLException;
 public class DBUtil {
     public static Connection getConnection() throws ClassNotFoundException, SQLException {
         Class.forName("com.mysql.jdbc.Driver");
-        Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/test?characterEncoding=UTF-8&serverTimezone=UTC", "root","root");
+        Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/test?characterEncoding=UTF-8&serverTimezone=UTC", "root", "root");
         return connection;
     }
 
@@ -22,8 +22,8 @@ public class DBUtil {
         Integer b = 1000;
         Integer c = 100;
         Integer d = 100;
-        System.out.println(a==b);
-        System.out.println(c==d);
+        System.out.println(a == b);
+        System.out.println(c == d);
 //        StringBuffer
     }
 }

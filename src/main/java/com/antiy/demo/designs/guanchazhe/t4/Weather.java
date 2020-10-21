@@ -18,11 +18,11 @@ public class Weather {
     }
 
     //感应器告知数据变了
-    public void change(String wenDu, String shiDu, String qiYa){
+    public void change(String wenDu, String shiDu, String qiYa) {
         this.wenDu = wenDu;
         this.shiDu = shiDu;
         this.qiYa = qiYa;
-        phone.update(wenDu,shiDu);
+        phone.update(wenDu, shiDu);
     }
 
 }

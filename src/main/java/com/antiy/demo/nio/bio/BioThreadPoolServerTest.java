@@ -22,19 +22,19 @@ public class BioThreadPoolServerTest {
     public static void main(String[] args) {
         ServerSocket serverSocket = null;
         try {
-            System.out.println("监听来自于"+DEFAULT_PORT+"的端口信息");
+            System.out.println("监听来自于" + DEFAULT_PORT + "的端口信息");
             serverSocket = new ServerSocket(DEFAULT_PORT);
-            while(true) {
+            while (true) {
                 Socket socket = serverSocket.accept();
                 //当然业务处理过程可以交给一个线程（这里可以使用线程池）,并且线程的创建是很耗资源的。
                 //最终改变不了.accept()只能一个一个接受socket的情况,并且被阻塞的情况
                 SocketServerThread socketServerThreadPool = new SocketServerThread(socket);
                 executorService.execute(socketServerThreadPool);
             }
-        } catch(Exception e) {
+        } catch (Exception e) {
 
         } finally {
-            if(serverSocket != null) {
+            if (serverSocket != null) {
                 try {
                     serverSocket.close();
                 } catch (IOException e) {

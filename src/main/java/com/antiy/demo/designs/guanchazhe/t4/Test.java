@@ -9,6 +9,6 @@ public class Test {
     public static void main(String[] args) {
         Phone phone = new Phone();
         Weather weather = new Weather(phone);
-        weather.change("11","22","33");
+        weather.change("11", "22", "33");
     }
 }

@@ -17,7 +17,7 @@ import java.util.logging.Logger;
  * @Date 2019/11/1
  */
 //@Controller
-@Api(tags = "1.1" ,description = "Reids",value = "Redis测试")
+@Api(tags = "1.1", description = "Reids", value = "Redis测试")
 public class RedisController {
     private static final String REDIS_TEST = "test";
     private Logger logger = Logger.getLogger("RedisController");
@@ -27,15 +27,16 @@ public class RedisController {
     @ApiOperation(value = "redis存储", notes = "传入实体对象信息")
     @RequestMapping(value = "/put")
     @ResponseBody
-    public String testRedisAdd(String test){
-        redisTemplate.opsForValue().set(REDIS_TEST,test);
+    public String testRedisAdd(String test) {
+        redisTemplate.opsForValue().set(REDIS_TEST, test);
         logger.info("缓存redis");
         return "redis";
     }
+
     @ApiOperation(value = "redis取值", notes = "传入实体对象信息")
     @RequestMapping(value = "/get")
     @ResponseBody
-    public String getRedis(){
+    public String getRedis() {
         logger.info("获取缓存redis");
         return (String) redisTemplate.opsForValue().get(REDIS_TEST);
     }

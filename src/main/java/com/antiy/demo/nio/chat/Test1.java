@@ -16,7 +16,7 @@ public class Test1 {
         String newString = "Hello";
         SocketChannel channel = SocketChannel.open();
         //channel.configureBlocking(false);
-        channel.connect(new InetSocketAddress("localhost",11113));
+        channel.connect(new InetSocketAddress("localhost", 11113));
         ByteBuffer byteBuffer = ByteBuffer.allocate(512);
         byteBuffer.put(newString.getBytes());
         byteBuffer.flip();

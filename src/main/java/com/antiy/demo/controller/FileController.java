@@ -16,13 +16,13 @@ import java.util.Objects;
  * @Description
  * @Date 2019/10/16
  */
-@Api(tags = "1.1" ,description = "测试文件上传",value = "文件上传")
+@Api(tags = "1.1", description = "测试文件上传", value = "文件上传")
 //@Controller
 //@RequestMapping("/a")
 public class FileController {
     @GetMapping("/")
     @ResponseBody
-    private String index(){
+    private String index() {
         return "upload";
     }
 
@@ -34,7 +34,7 @@ public class FileController {
         if (wosi != null) {
 
         }
-        List ls = Arrays.asList("11","122");
+        List ls = Arrays.asList("11", "122");
         for (Object l : ls) {
 
         }
@@ -46,7 +46,7 @@ public class FileController {
         }
     }
 
-    public String testSql(){
+    public String testSql() {
 
         return "";
     }

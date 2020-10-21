@@ -19,6 +19,7 @@ public class Demo1 {
         ServletHandler servletHandler = new ServletHandler(serverSocket);
         servletHandler.start();
     }
+
     private static class ServletHandler extends Thread {
         ServerSocket server = null;
 

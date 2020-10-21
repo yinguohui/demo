@@ -9,6 +9,7 @@ import java.sql.SQLException;
 
 /**
  * 功能描述 :
+ *
  * @author ygh
  * @date 13:41
  */
@@ -18,10 +19,11 @@ public class SimplePoolTest {
 
     /**
      * 单个线程使用连接池对象做查询业务
-     * @author heylinlook
-     * @date 2018/4/27 21:01
+     *
      * @param
      * @return
+     * @author heylinlook
+     * @date 2018/4/27 21:01
      */
     public synchronized static void selectData() {
         PoolConnection connection = simplePool.getConnection();

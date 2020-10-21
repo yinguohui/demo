@@ -10,6 +10,7 @@ public class Test {
     private static Object a = new Object();
     private static Object b = new Object();
     private static Object c = new Object();
+
     public static void main(String[] args) {
         //ThreadPoolExecutor executor = new ThreadPoolExecutor(5,10,0L, TimeUnit.MILLISECONDS,new ArrayBlockingQueue<>(10));
     }
