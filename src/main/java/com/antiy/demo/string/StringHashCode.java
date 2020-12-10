@@ -1,5 +1,7 @@
 package com.antiy.demo.string;
 
+import java.util.HashMap;
+
 /**
  * @Author ygh
  * @Description
@@ -17,5 +19,6 @@ public class StringHashCode {
         System.out.println(b.hashCode());
         System.out.println(a == b);
         System.out.println(a.equals(b));
+        HashMap hashMap = new HashMap();
     }
 }
